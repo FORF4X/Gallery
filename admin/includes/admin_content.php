@@ -9,15 +9,22 @@
                         </h1>
 
                         <?php 
-                            $result_set = User::find_all_users();
+                            // $result_set = User::find_all_users();
 
-                            while($row = mysqli_fetch_array($result_set)) {
-                                echo $row['username'] . "<br>";
-                            }          
-                            
-                            $found_user = User::find_user_by_id(1);
+                            // while($row = mysqli_fetch_array($result_set)) {
+                            //     echo $row['username'] . "<br>";
+                            // }   
 
-                            echo "User number 1: " . $found_user['username'];
+                            // $users = User::find_all_users();
+
+                            // foreach($users as $user) {
+                            //     echo $user->last_name . "<br>";
+                            // }
+
+                            $found_user = User::find_user_by_id(3);
+                            echo $found_user->username;
+
+                        
                         ?>
 
                         <ol class="breadcrumb">
